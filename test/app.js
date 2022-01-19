@@ -108,11 +108,27 @@ class Graph {
     }
 }
 
+var graph = new Graph();
 
+
+graph.addEdge('a', 'b'); 
+graph.addEdge('a', 'e');
+graph.addEdge('b', 'c');
+graph.addEdge('e', 'f');
+graph.addEdge('c', 'f');
+
+console.log(graph.dfs('a'));
 //1.5.1
 /*
 on libère pas la mémoire aprés l'allocation, donc on va finir par épuiser la mémoire (run out of memory) seg fault
+1.5.2
+Une raibow table est une table précalculée pour mettre en cache la sortie des fonctions de hachage cryptographiques, 
+généralement pour déchiffrer les hachages de mots de passe. Les tables sont généralement utilisées pour récupérer une fonction de dérivation de clé (ou de numéros de carte de crédit, etc.)
+jusqu'à une certaine longueur constituée d'un ensemble limité de caractères.
+
+Une raibow table est inefficace contre les hachages à sens unique qui incluent de gros "salt"
 */
+
 //2.1 Decorateur :
 var User = function (name) {
     this.name = name;
@@ -156,3 +172,16 @@ const myUser = new User2("oussama");
 myUser.on("saying name", sentence => console.log(sentence));
 myUser.say();
 
+//3.1
+/*
+ * 1-
+
+Docker peut être classé comme un outil dans la catégorie "Plateformes et conteneurs de machines virtuelles", tandis que VirtualBox est regroupé sous "Plateforme de virtualisation.
+"Intégration et développement rapides", "Isolation" et "Open source" sont les facteurs clés pour lesquels les développeurs envisagent Docker ; alors que "Gratuit", "Facile"  sont les principales raisons pour lesquelles VirtualBox est favorisé.
+2-limiter pour réduire la taille
+3-
+1-en utilisant SSH pour proteger le socket du docker daemon
+2-en utilisant TLS (HTTPS) pour proteger le socket du docker daemon
+3-en utilisant la securité par defaut
+ */
+//3.2 consulter le fichier docker-compose dans cette solution
